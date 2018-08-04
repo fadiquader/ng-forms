@@ -26,6 +26,7 @@ export class TemplateDrivenFormComponent implements OnInit, AfterViewInit {
   onSubmit() {
     if(this.form.valid) {
       console.log('values ', this.form.value);
+      this.form.reset();
     } else {
       console.log('Invalid Form ');
     }

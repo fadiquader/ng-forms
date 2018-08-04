@@ -10,7 +10,7 @@
           name="firstName"
           [(ngModel)]="model.firstName"
           required
-          #firstName
+          #firstName="ngModel"
         >
       </div>
       <div class="form-group">
@@ -21,7 +21,7 @@
           name="lastName"
           [(ngModel)]="model.lastName"
           required
-          #lastName
+          #lastName="ngModel"
         >
       </div>
     </fieldset>
@@ -58,12 +58,14 @@
         class="form-control"
         [(ngModel)]="model.password"
         required
+        #password="ngModel"
       >
     </div>
     <div class="form-group">
       <label>Language</label>
       <select class="form-control"
               name="language"
+              #language="ngModel"
               [(ngModel)]="model.language">
         <option value="">Please select a language</option>
         <option *ngFor="let lang of languages"
