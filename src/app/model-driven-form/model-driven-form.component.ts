@@ -44,7 +44,7 @@ export class ModelDrivenFormComponent implements OnInit {
     ]);
     this.email = new FormControl('', [
       Validators.required,
-      Validators.pattern('[^ @]*@[^ @]*')
+      Validators.email,
     ]);
     this.password = new FormControl('', [
       Validators.required,
